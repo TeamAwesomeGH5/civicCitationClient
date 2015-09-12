@@ -34,7 +34,7 @@ myApp.directive('citationPanel', ['civicCitationBackendService', function(civicC
   return {
     controller: function($scope) {
       $scope.name = 'Bob';
-      console.log(civicCitationBackendService.getCitationByCreds());
+      $scope.citationInfo = civicCitationBackendService.getCitationByCreds();
     },
     templateUrl: 'directives/citationPanel/citationPanel.html'
   };
