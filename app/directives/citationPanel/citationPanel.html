@@ -1,5 +1,5 @@
 <div ng-repeat="citation in citationInfo.Citations">
-  <div class='label'>Citation Id: </div> <div class='info'> {{citation.citation_date}}</div>
+  <div class='label'>Citation Id: </div> <div class='info'> {{citation.id}}</div>
   <div class='label'>Name: </div> <div class='info'> {{citation.first_name + " " + citation.last_name}}</div>
   <div class='label'>Court Date: </div> <div class='info'> {{citation.court_date  | date:'medium'}}</div>
   <div class='label'>Court Address: </div> <div class='info'> {{citation.court_address + "," + citation.court_location}}</div>
