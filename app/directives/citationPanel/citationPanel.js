@@ -3,6 +3,9 @@
 angular.module('myApp', [])
 .directive('citationPanel', function() {
   return {
-    template: '<div>lol</div>'
+    controller: function($scope) {
+      $scope.name = 'Bob';
+    },
+    templateUrl: 'directives/citationPanel/citationPanel.html'
   };
 });
