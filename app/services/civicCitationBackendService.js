@@ -1,9 +1,10 @@
-'use strict';
-var myApp = angular.module('myApp', []);
 
+var myApp = angular.module('myApp', [])
 myApp.service('civicCitationBackendService',
 function() {
+  console.log("We are in the service.")
   this.getCitationByCreds = function(creds) {
+    return function(){
       return {
               Citations:
               [
@@ -26,16 +27,6 @@ function() {
               Valid: true,
               Message: ""
           };
+    };
   }
 });
-
-
-myApp.directive('citationPanel', ['civicCitationBackendService', function(civicCitationBackendService) {
-  return {
-    controller: function($scope) {
-      $scope.name = 'Bob';
-      console.log(civicCitationBackendService.getCitationByCreds());
-    },
-    templateUrl: 'directives/citationPanel/citationPanel.html'
-  };
-}]);
