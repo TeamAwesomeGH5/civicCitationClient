@@ -13,6 +13,9 @@ config(function($stateProvider, $urlRouterProvider) {
     .state('citationsList', {
       url: "/listCitation",
       templateUrl: "pages/CitationsList/citationsList.html",
-      controller: "CitationsList"
+      controller: "CitationsList",
+      params:{
+        citation: null
+      }
     });
 });

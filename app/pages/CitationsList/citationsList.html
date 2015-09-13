@@ -1,1 +1,10 @@
-<citation-panel></citation-panel>
+
+<div class='table'>
+  <div class="row">
+    <div class='label'>Citation Id</div>
+    <div class='label'>Name</div>
+    <div class='label'>Court Date</div>
+    <div class='label'>Court Address</div>
+  </div>
+  <citation-panel ng-repeat="citation in citationInfo.Citations" citation="citation" class="row"></citation-panel>
+</div>

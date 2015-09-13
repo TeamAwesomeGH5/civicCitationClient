@@ -32,9 +32,11 @@ function() {
 
 myApp.directive('citationPanel', ['civicCitationBackendService', function(civicCitationBackendService) {
   return {
+    scope: {
+      citation: "="
+    },
     controller: function($scope) {
       $scope.name = 'Bob';
-      $scope.citationInfo = civicCitationBackendService.getCitationByCreds();
     },
     templateUrl: 'directives/citationPanel/citationPanel.html'
   };
