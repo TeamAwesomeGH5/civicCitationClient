@@ -5,12 +5,16 @@ myApp.service('civicCitationBackendService',
 ['$http', function($http) {
   this.getCitationByCreds = function(creds) {
     var req = {
-     method: 'GET',
-     url: 'http://192.168.1.116:9001/api/citation/513276502',
+     method: 'POST',
+     url: 'http://192.168.1.116:9001/api/citations',
      headers: {
        'Content-Type': 'application/json'
      },
-     data: undefined
+     data: {
+       last_name: creds.lastName,
+       license_number: creds.licenseNumber,
+       dob: creds.dob
+     }
     }
 
     return $http(req).then(function(response){
@@ -49,7 +53,7 @@ myApp.directive('citationPanel', ['civicCitationBackendService', function(civicC
       citation: "="
     },
     controller: function($scope) {
-      
+
     },
     templateUrl: 'directives/citationPanel/citationPanel.html'
   };
