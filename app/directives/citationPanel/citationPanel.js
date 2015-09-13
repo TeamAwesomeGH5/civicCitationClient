@@ -40,7 +40,7 @@ myApp.service('civicCitationBackendService',
       //               court_address: ""
       //           }
       //         ],
-      //         Valid: true,
+      //         Valid<div class='info' ng-show="!citation.show">+</div>
       //         Message: ""
       //     };
   };

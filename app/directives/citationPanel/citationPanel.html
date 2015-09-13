@@ -1,4 +1,8 @@
-<div class='info'> {{citation.citation_number}}</div>
+<div class='info'>
+  <div style="margin-right:5px;" ng-show="citation.show">-</div>
+  <div style="margin-right:5px;" ng-hide="citation.show">+</div>
+  <div>&nbsp;{{citation.citation_number}}</div>
+</div>
 <div class='info'> {{citation.first_name + " " + citation.last_name}}</div>
 <div class='info'> {{citation.court_date  | date:'medium'}}</div>
 <div class='info'> {{citation.court_address + " ," + citation.court_location}}</div>

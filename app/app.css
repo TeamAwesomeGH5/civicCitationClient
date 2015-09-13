@@ -55,6 +55,10 @@
   width: 16%;
 }
 
+.info div {
+  float: left;
+}
+
 .row {
   float:left;
   width: 100%;
