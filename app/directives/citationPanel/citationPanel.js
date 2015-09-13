@@ -6,7 +6,7 @@ myApp.service('civicCitationBackendService',
   this.getCitationByCreds = function(creds) {
     var req = {
      method: 'POST',
-     url: 'http://192.168.1.116:9001/api/citations',
+     url: 'http://localhost:6969/api/citations',
      headers: {
        'Content-Type': 'application/json'
      },

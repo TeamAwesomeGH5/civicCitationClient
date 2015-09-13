@@ -18,13 +18,13 @@ config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider, $httpP
         citation: null
       }
     });
-    
-    $httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
+
+    //$httpProvider.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
 
     $sceDelegateProvider.resourceUrlWhitelist([
       // Allow same origin resource loads.
       'self',
       // Allow loading from outer templates domain.
-      'http://192.168.1.116:6969/**'
+      'http://localhost:6969/**'
     ]);
 });
