@@ -29,26 +29,39 @@
   padding: 0;
 }
 
-.label, .info {
-  display:table-cell;
-  width: 24%;
+.label, .citationRow .info {
+  float: left;
   border-width: 0px 1px 1px 0px;
   border-style: solid;
   border-color: #000000;
 }
 
-.label {
+.labelGeneral .info {
   font-weight: bold;
 }
 
+.label {
+  width: 24%;
+  font-weight: bold;
+}
+
+.citationRow .info {
+  width: 24%;
+}
+
+
+.violationRow .info {
+  float: left;
+  width: 16%;
+}
+
 .row {
-  display:table-row;
+  float:left;
   width: 100%;
 }
 
 .table {
   width: 100%;
-  display: table;
 }
 
 .outerBox {
@@ -67,4 +80,8 @@
   margin-left: auto;
   margin-right: auto;
   display: inherit;
+}
+
+.subTable {
+  clear:both;
 }

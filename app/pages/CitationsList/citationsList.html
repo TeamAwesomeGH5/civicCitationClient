@@ -6,5 +6,23 @@
     <div class='label'>Court Date</div>
     <div class='label'>Court Address</div>
   </div>
-  <citation-panel ng-repeat="citation in citationInfo.Citations" citation="citation" class="row"></citation-panel>
+  <div ng-repeat="citation in citationInfo.Citations">
+    <citation-panel citation="citation" class="row citationRow" ng-click="citation.show = !citation.show"></citation-panel>
+    <div class="row violationRow labelGeneral" ng-show="citation.show">
+      <div class='info'>Court_cost</div>
+      <div class='info'>Fine_amount</div>
+      <div class='info'>Status</div>
+      <div class='info'>Status_date</div>
+      <div class='info'>Violation_description</div>
+      <div class='info'>Warrant_status</div>
+    </div>
+    <div class="row violationRow" ng-repeat="violation in citation.Violations" ng-show="citation.show">
+      <div class='info'>{{violation.Court_cost}}</div>
+      <div class='info'>{{violation.Fine_amount}}</div>
+      <div class='info'>{{violation.Status}}</div>
+      <div class='info'>{{violation.Status_date}}</div>
+      <div class='info'>{{violation.Violation_description}}</div>
+      <div class='info'>{{violation.Warrant_status}}</div>
+    </div>
+  </div>
 </div>
