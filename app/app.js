@@ -2,8 +2,8 @@
 
 // Declare app level module which depends on views, and components
 angular.module('myApp', ['ui.router']).
-config(function($stateProvider, $routeProvider) {
-  $routeProvider.otherwise({redirectTo: '/'});
+config(function($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider.otherwise("/")
   $stateProvider
     .state('searchForCitation', {
       url: "/",
@@ -12,7 +12,7 @@ config(function($stateProvider, $routeProvider) {
     })
     .state('citationsList', {
       url: "/listCitation",
-      templateUrl: "app/directives/citationPanel/citationPanel.html",
-      controller: "citationPanel"
+      templateUrl: "pages/CitationsList/citationsList.html",
+      controller: "CitationsList"
     });
 });
