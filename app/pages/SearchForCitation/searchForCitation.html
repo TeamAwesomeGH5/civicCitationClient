@@ -1,14 +1,16 @@
 <div>
-  <form name="myForm">
-    <label>Last Name:
+  <form class="outsideBox" name="myForm">
+    <h2 class="innerBox">Citation Lookup</h2>
+    <label class="innerBox">Last Name:
       <input type="text" name="input" ng-model="citation.lastName" required ng-trim="false">
     </label>
-    <label>License Number:
+    <label class="innerBox">License Number:
       <input type="text" name="input" ng-model="citation.licenseNumber" required ng-trim="false">
     </label>
-    <label>Date of birth:
+    <label class="innerBox">Date of birth:
       <input type="text" name="input" ng-model="citation.dob" required ng-trim="false">
     </label>
+
+    <button type="button" class='center btn btn-default' ng-click="submitCitation()">Submit</button>
   </form>
-  <button ng-click="submitCitation()">Submit</button>
 </div>

@@ -1,9 +1,9 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-angular.module('myApp', ['ui.router']).
+angular.module('myApp', ['ui.router','ui.bootstrap']).
 config(function($stateProvider, $urlRouterProvider, $sceDelegateProvider, $httpProvider) {
-  $urlRouterProvider.otherwise("/")
+  $urlRouterProvider.otherwise("/");
   $stateProvider
     .state('searchForCitation', {
       url: "/",
